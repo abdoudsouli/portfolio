@@ -1,56 +1,119 @@
 
-import img  from '../../assets/me.png'
+import img  from '../../assets/me.jpeg'
 import SplitText from '../../components/Reactbits/SplitText'
 import TextType from '../../components/Reactbits/TextType'
+import { MdEmail } from "react-icons/md";
+import { FaGithub } from "react-icons/fa";
+import { FaLinkedinIn } from "react-icons/fa6";
+import { FaPhoneVolume } from "react-icons/fa6";
+import { motion } from "motion/react"
 
 export default function Home() {
   return (
-    <div className="container h-[80%] mx-auto ">
-      <div className="grid md:grid-cols-1 mx-3 lg:grid-cols-2 mx-0 gap-4 text-gray-50">
+    <div className="container h-[calc(100vh-5rem)] mx-auto ">
+      <div className="grid grid-cols-1 mx-3  gap-4 text-gray-50 items-center text-center  h-full md:grid-cols-2 md:mx-0 md:text-left">
          <div className='grid grid-cols-1 content-center'>
-<div className=''>
+<motion.div
+  initial={{
+        y:'+2vw'
+        }}
+        animate={{
+         y:0
+        }}
+        transition={{
+         duration:1,
+         delay:0.5
+         }}
+className='text-2xl font-semibold'>
+<h2
+className='text-sm w-max py-1 px-3 my-2 bg-red-800 text-gray-50 rounded-lg '
+>Dsouli Abderrazak</h2>
 <SplitText
-text='Abderrazak Dsouli'
-delay={200}
+className='uppercase text-5xl'
+text="hay! i'm Dsouli"
+delay={100}
 duration={1.1}
-className="text-2xl font-semibold"
 />    
-</div>
-<div className=''>
+</motion.div>
+
+<motion.div 
+  initial={{
+        y:'+3vw'
+        }}
+        animate={{
+         y:0
+        }}
+        transition={{
+         duration:1,
+         delay:0.5
+         }}
+className='text-5xl font-black uppercase'>
 <TextType
-className='text-5xl font-black uppercase'
+className='text-red-800 text-5xl'
 text={["FrontEnd", "BackEnd", "Happy coding!"]}
 typingSpeed={75}
 pauseDuration={1500}
 showCursor={true}
 cursorCharacter="|"
 /> 
-</div>
+</motion.div>
 
-             <p
-             className='py-4 text-gray-400 text-lg leading-10'
-             >Lorem ipsum dolor, sit amet consectetur adipisicing elit. Commodi placeat necessitatibus, exercitationem voluptatum optio enim eius praesentium aliquid adipisci et accusantium dicta excepturi quis cum iusto! Adipisci reprehenderit eligendi sunt?</p>
-        <div className='mt-3 '>
-          <ul className='flex justify-between '>
-            <li>
-                <a className="py-2 px-4 rounded-lg bg-red-950 text-gray-50 text-sm hover:bg-red-500 transition ease-in-out duration-500" href="http://" target="_blank" rel="noopener noreferrer">Linkedin</a>
-            </li>
-            <li>
-                 <a className="py-2 px-4 rounded-lg bg-red-950 text-gray-50 text-sm hover:bg-red-500 transition ease-in-out duration-500" href="http://" target="_blank" rel="noopener noreferrer">GitHub</a>
-            </li>
-            <li>
-                 <a className="py-2 px-4 rounded-lg bg-red-950 text-gray-50 text-sm hover:bg-red-500 transition ease-in-out duration-500" href="http://" target="_blank" rel="noopener noreferrer">Email</a>
-            </li>
-            <li>
-                 <a className="py-2 px-4 rounded-lg bg-red-950 text-gray-50 text-sm hover:bg-red-500 transition ease-in-out duration-500" href="http://" target="_blank" rel="noopener noreferrer">Phone</a>
-            </li>
-          </ul>
-        </div>
+        <motion.p
+          initial={{
+        y:'+4vw'
+        }}
+        animate={{
+         y:0
+        }}
+        transition={{
+         duration:1,
+         delay:0.5
+         }}
+         className='py-4 text-gray-400 text-md leading-7'>
+        Full Stack Web Developer with 5 years of experience, including 2 years as a freelancer, specializing in the development of robust web applications using PHP/Laravel and database management (MySQL, PostgreSQL). Strong expertise in process automation and the creation of custom internal tools. Self-driven, detail-oriented, and performance-focused.    
+        </motion.p>
+
+        <motion.div 
+        initial={{
+        x:'-100vw'
+        }}
+        animate={{
+         x:0
+        }}
+        transition={{
+         duration:1,
+         delay:0.5
+         }}
+        className='mt-3 flex justify-center w-max mx-auto md:mx-0 '>
+          <a className='text-2xl px-3 py-3 bg-gray-300 text-red-800 rounded-4xl hover:bg-red-800 hover:text-gray-300 transition ease-in-out duration-700 mr-5' href="http://" target="_blank" rel="noopener noreferrer">
+          <FaLinkedinIn />
+          </a>
+          <a className='text-2xl px-3 py-3 bg-gray-300 text-red-800 rounded-4xl hover:bg-red-800 hover:text-gray-300 transition ease-in-out duration-700 mr-5' href="http://" target="_blank" rel="noopener noreferrer">
+          <FaGithub />
+          </a>
+          <a className='text-2xl px-3 py-3 bg-gray-300 text-red-800 rounded-4xl hover:bg-red-800 hover:text-gray-300 transition ease-in-out duration-700 mr-5' href="http://" target="_blank" rel="noopener noreferrer">
+          <MdEmail />
+          </a>
+          <a className='text-2xl px-3 py-3 bg-gray-300 text-red-800 rounded-4xl hover:bg-red-800 hover:text-gray-300 transition ease-in-out duration-700' href="http://" target="_blank" rel="noopener noreferrer">
+          <FaPhoneVolume />
+          </a>
+        </motion.div>
          </div>
 
-         <div className='flex justify-center py-20'>
-            <img className='shadow-pink-950 shadow-2xl rounded-3xl block h-100' src={img} alt="" />
-         </div>
+         <motion.div 
+         initial={{
+          x:'+100vw'
+         }}
+         animate={{
+           x:0
+         }}
+         transition={{
+          duration:1,
+          delay:0.5
+         }}
+         className='flex justify-center py-20'>
+            <img className='shadow-red-800 shadow-2xl rounded-4xl block w-[400px]' src={img} alt="" />
+         </motion.div>
       </div>
     </div>
   )
