@@ -44,6 +44,14 @@ The project is built using the following technologies and libraries:
 
 ## 📁 Project Structure
 
+- **Pages/**: Application pages handled by React Router  
+- **components/**: Reusable UI components  
+- **Reactbits/**: Custom animated text and visual components  
+- **assets/**: Images and static assets  
+- **App.jsx**: Root application component  
+- **main.jsx**: Application entry point  
+- **index.css**: Global styles and Tailwind setup 
+
 ```bash
 src/
 │── Pages/
@@ -78,11 +86,5 @@ src/
 │── index.css
 
 
-- **Pages/**: Application pages handled by React Router  
-- **components/**: Reusable UI components  
-- **Reactbits/**: Custom animated text and visual components  
-- **assets/**: Images and static assets  
-- **App.jsx**: Root application component  
-- **main.jsx**: Application entry point  
-- **index.css**: Global styles and Tailwind setup  
+ 
 
