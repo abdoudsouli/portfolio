@@ -1,26 +1,31 @@
 import RotatingText from '../../components/Reactbits/RotatingText'
 import developer from '../../assets/deve.svg'
 import LogoLoop from '../../components/Reactbits/LogoLoop';
-import { SiReact, SiNextdotjs, SiTypescript, SiTailwindcss } from 'react-icons/si';
+import { SiReact, SiMysql , SiLaravel , SiTailwindcss,SiJavascript ,SiPostgresql,SiHtml5,SiCss3 ,SiBootstrap,SiJquery,SiAdobeillustrator ,SiAdobephotoshop,SiCpanel,SiJira,SiRefinedgithub,SiGit    } from 'react-icons/si';
 import { motion } from "motion/react"
 
 const techLogos = [
-  { node: <SiReact />, title: "React", href: "https://react.dev" },
-  { node: <SiNextdotjs />, title: "Next.js", href: "https://nextjs.org" },
-  { node: <SiTypescript />, title: "TypeScript", href: "https://www.typescriptlang.org" },
-  { node: <SiTailwindcss />, title: "Tailwind CSS", href: "https://tailwindcss.com" },
+ { node: <SiReact />, title: "React", href: "https://react.dev/" },
+  { node: <SiJavascript />, title: "JavaScript", href: "https://developer.mozilla.org/en-US/docs/Web/JavaScript" },
+  { node: <SiLaravel />, title: "Laravel", href: "https://laravel.com/" },
+  { node: <SiMysql />, title: "MySQL", href: "https://www.mysql.com/" },
+  { node: <SiPostgresql />, title: "PostgreSQL", href: "https://www.postgresql.org/" },
+  { node: <SiTailwindcss />, title: "Tailwind CSS", href: "https://tailwindcss.com/" },
+  { node: <SiHtml5 />, title: "HTML5", href: "https://developer.mozilla.org/en-US/docs/Web/HTML" },
+  { node: <SiCss3 />, title: "CSS3", href: "https://developer.mozilla.org/en-US/docs/Web/CSS" },
+  { node: <SiBootstrap />, title: "Bootstrap", href: "https://getbootstrap.com/" },
+  { node: <SiJquery />, title: "jQuery", href: "https://jquery.com/" },
+  { node: <SiAdobeillustrator />, title: "Adobe Illustrator", href: "https://www.adobe.com/products/illustrator.html" },
+  { node: <SiAdobephotoshop />, title: "Adobe Photoshop", href: "https://www.adobe.com/products/photoshop.html" },
+  { node: <SiCpanel />, title: "cPanel", href: "https://cpanel.net/" },
+  { node: <SiRefinedgithub />, title: "GitHub", href: "https://github.com/" },
+  { node: <SiJira />, title: "Jira", href: "https://www.atlassian.com/software/jira" },
 ];
 
-// Alternative with image sources
-const imageLogos = [
-  { src: "/logos/company1.png", alt: "Company 1", href: "https://company1.com" },
-  { src: "/logos/company2.png", alt: "Company 2", href: "https://company2.com" },
-  { src: "/logos/company3.png", alt: "Company 3", href: "https://company3.com" },
-];
 
 export default function About() {
   return (
-    <div className="container  h-[calc(100vh-5rem)] flex flex-col justify-center mx-auto text-gray-50 py-5"> 
+    <div className="container h-max  lg:h-[calc(100vh-5rem)] flex flex-col justify-center mx-auto text-gray-50 py-6"> 
         <motion.h2
         initial={{
           y:'+2rem'
@@ -32,7 +37,7 @@ export default function About() {
           duration:1,
           delay:0.5
         }}
-        className='text-2xl flex items-center  gap-5 font-bold'>
+        className='text-2xl flex items-center mx-auto md:mx-0 gap-5 font-bold'>
         Programing
           <RotatingText
           texts={['With','Laravel','×','React','Powerful','Fast','Modern']}
@@ -68,7 +73,7 @@ I enjoy turning complex ideas into simple, scalable solutions and building syste
 As a freelancer, I’ve worked on diverse projects, collaborating with clients to deliver clean code, clear communication, and real value.
 Always curious, always learning — I’m driven by growth, performance, and well-crafted digital experiences.
 </p>
-           <div className='max-w-[600px] overflow-hidden h-20 mx-auto mt-10'>
+           <div className='max-w-[700px] overflow-hidden h-20 mx-auto mt-10'>
       <LogoLoop
         logos={techLogos}
         speed={120}
@@ -95,7 +100,7 @@ Always curious, always learning — I’m driven by growth, performance, and wel
           duration:1,
           delay:0.5
         }}
-    className='flex justify-center'>
+    className='hidden lg:flex justify-center'>
       <motion.div
   initial={{ y: "-2rem" }}
 animate={{ y: ["-2rem", "0rem", "-2rem"] }}

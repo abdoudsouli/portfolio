@@ -11,8 +11,8 @@ import { motion } from "motion/react"
 export default function Home() {
   return (
     <div className="container h-[calc(100vh-5rem)] mx-auto ">
-      <div className="grid grid-cols-1 mx-3  gap-4 text-gray-50 items-center text-center  h-full md:grid-cols-2 md:mx-0 md:text-left">
-         <div className='grid grid-cols-1 content-center'>
+      <div className="text-gray-50 text-center h-full flex flex-col-reverse  md:flex-row md:items-center md:mx-0 md:text-left">
+         <div className='md:w-1/2'>
 <motion.div
   initial={{
         y:'+2vw'
@@ -26,7 +26,7 @@ export default function Home() {
          }}
 className='text-2xl font-semibold'>
 <h2
-className='text-sm w-max py-1 px-3 my-2 bg-red-800 text-gray-50 rounded-lg '
+className='text-sm w-max py-1 px-3 my-2 bg-red-800 text-gray-50 rounded-lg mx-auto lg:mx-0'
 >Dsouli Abderrazak</h2>
 <SplitText
 className='uppercase text-5xl'
@@ -111,8 +111,8 @@ cursorCharacter="|"
           duration:1,
           delay:0.5
          }}
-         className='flex justify-center py-20'>
-            <img className='shadow-red-800 shadow-2xl rounded-4xl block w-[400px]' src={img} alt="" />
+         className='md:w-1/2'>
+            <img className='shadow-red-800 shadow-2xl rounded-4xl block w-50 mb-12 md:mb-0 md:w-[400px] mx-auto' src={img} alt="" />
          </motion.div>
       </div>
     </div>

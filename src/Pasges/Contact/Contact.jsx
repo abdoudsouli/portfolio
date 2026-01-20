@@ -1,6 +1,23 @@
 import React from 'react'
-
+import { useState } from "react";
 export default function Contact() {
+
+   const [form, setForm] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
+
+  const handleChange = (e) => {
+    setForm({ ...form, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log(form);
+    // هنا تقدر تربط EmailJS أو backend
+  };
+
   return (
     <section className="w-full min-h-screen flex items-center justify-center bg-gray-950 px-4">
       <form

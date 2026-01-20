@@ -1,8 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Google+Sans+Code:ital,wght@0,700;1,700&display=swap');
 @import "tailwindcss";
-@import url('https://fonts.googleapis.com/css2?family=Changa+One:ital@0;1&display=swap');
+
 
 html ,body{
-font-family: "Changa One", sans-serif;
-  font-weight: 400;
+  font-family: "Google Sans Code", monospace;
+  font-optical-sizing: auto;
+  font-weight: 700;
   font-style: normal;
 }
