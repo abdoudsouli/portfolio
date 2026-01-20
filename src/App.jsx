@@ -1,4 +1,4 @@
-import Contant from "./components/Layout/Contant"
+import Content from "./components/Layout/Content"
 import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
 import Home from "./Pasges/Home/Home";
 import About from "./Pasges/About/About";
@@ -9,7 +9,7 @@ import Contact from "./Pasges/Contact/Contact";
 function App() {
   return (
     <>
-    <Contant>
+    <Content>
     <BrowserRouter>
       <Navbar/>
       <Routes>
@@ -19,7 +19,7 @@ function App() {
         <Route path="*" element={<Error404 />} />
       </Routes>
     </BrowserRouter>
-    </Contant>
+    </Content>
     </>
    
 

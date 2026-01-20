@@ -25,7 +25,7 @@ const techLogos = [
 
 export default function About() {
   return (
-    <div className="container h-max  lg:h-[calc(100vh-5rem)] flex flex-col justify-center mx-auto text-gray-50 py-6"> 
+    <div className="container h-[calc(100vh-5rem)] flex flex-col justify-center  mx-auto text-gray-50 py-6"> 
         <motion.h2
         initial={{
           y:'+2rem'
