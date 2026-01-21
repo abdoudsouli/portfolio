@@ -1,5 +1,5 @@
 
-import img  from '../../assets/me.jpeg'
+import img  from '../../assets/me.png'
 import SplitText from '../../components/Reactbits/SplitText'
 import TextType from '../../components/Reactbits/TextType'
 import { MdEmail } from "react-icons/md";
@@ -11,7 +11,7 @@ import { motion } from "motion/react"
 export default function Home() {
   return (
     <div className="container h-[calc(100vh-5rem)] mx-auto ">
-      <div className="text-gray-50 text-center h-full flex flex-col-reverse  md:flex-row md:items-center md:mx-0 md:text-left">
+      <div className="text-center h-full flex flex-col-reverse  md:flex-row md:items-center md:mx-0 md:text-left">
          <div className='md:w-1/2'>
 <motion.div
   initial={{

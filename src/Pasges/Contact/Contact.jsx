@@ -1,5 +1,6 @@
-import React from 'react'
+
 import { useState } from "react";
+import { motion } from "motion/react"
 export default function Contact() {
 
    const [form, setForm] = useState({
@@ -15,19 +16,29 @@ export default function Contact() {
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log(form);
-    // هنا تقدر تربط EmailJS أو backend
   };
 
   return (
-    <section className="w-full min-h-screen flex items-center justify-center bg-gray-950 px-4">
+    <motion.section
+     initial={{
+        scale:0.5
+        }}
+        animate={{
+         scale:1
+        }}
+        transition={{
+         duration:0.6,
+         delay:0.2
+         }}
+    className=" flex items-center justify-center px-4">
       <form
         onSubmit={handleSubmit}
-        className="w-full max-w-md bg-gray-900 p-8 rounded-2xl shadow-lg space-y-6"
+        className="w-full max-w-lg  p-8 space-y-6"
       >
-        <h2 className="text-3xl font-bold text-white text-center">
-          Contact Me
+        <h2 className="text-2xl font-bold  text-center">
+          Do you have any questions? I will answer them ,Connect with me
         </h2>
-
+        <p className='text-gray-600 dark:text-xs text-center'>d love to hear from you! If you have any questions, comments or feedback, please use the form below. </p>
         <input
           type="text"
           name="name"
@@ -35,7 +46,7 @@ export default function Contact() {
           value={form.name}
           onChange={handleChange}
           required
-          className="w-full px-4 py-3 rounded-lg bg-gray-800 text-white outline-none focus:ring-2 focus:ring-cyan-400"
+          className="w-full px-4 py-3 rounded-lg bg-gray-200 text-gray-800 dark:bg-gray-800 dark:text-white outline-none focus:ring-1 focus:ring-gray-700 dark:focus:ring-red-900"
         />
 
         <input
@@ -45,7 +56,7 @@ export default function Contact() {
           value={form.email}
           onChange={handleChange}
           required
-          className="w-full px-4 py-3 rounded-lg bg-gray-800 text-white outline-none focus:ring-2 focus:ring-cyan-400"
+          className="w-full px-4 py-3 rounded-lg bg-gray-200 text-gray-800 dark:bg-gray-800 dark:text-white outline-none focus:ring-1 focus:ring-gray-700 dark:focus:ring-red-900"
         />
 
         <textarea
@@ -55,16 +66,16 @@ export default function Contact() {
           value={form.message}
           onChange={handleChange}
           required
-          className="w-full px-4 py-3 rounded-lg bg-gray-800 text-white outline-none focus:ring-2 focus:ring-cyan-400 resize-none"
+          className="w-full px-4 py-3 rounded-lg bg-gray-200 text-gray-800 dark:bg-gray-800 dark:text-white outline-none focus:ring-1 focus:ring-gray-700 dark:focus:ring-red-900 resize-none"
         />
 
         <button
           type="submit"
-          className="w-full py-3 rounded-lg bg-cyan-500 text-black font-semibold hover:bg-cyan-400 transition"
+          className="w-full py-3 rounded-lg bg-red-900 text-gray-50 font-semibold hover:bg-gray-50 hover:text-red-900 transition ease-in-out duration-700 cursor-pointer"
         >
           Send Message
         </button>
       </form>
-    </section>
+    </motion.section>
   )
 }

@@ -25,7 +25,7 @@ const techLogos = [
 
 export default function About() {
   return (
-    <div className="container h-[calc(100vh-5rem)] flex flex-col justify-center  mx-auto text-gray-50 py-6"> 
+    <div className="container h-[calc(100vh-5rem)] flex flex-col justify-center  mx-auto py-6"> 
         <motion.h2
         initial={{
           y:'+2rem'
@@ -66,7 +66,7 @@ export default function About() {
         className='mx-5 my-5 md:mx-0 md:my-0'
     >
      <h2 className='text-2xl font-bold uppercase text-red-700'>About Me</h2>
-     <p className='text-md text-gray-300 leading-6'>
+     <p className='text-md text-gray-600 dark:text-gray-300 leading-6'>
 I’m a Full Stack Web Developer with 5 years of experience, including 2 years as a freelance developer, crafting modern and reliable web applications.
 I specialize in PHP / Laravel, backend architecture, and database optimization (MySQL & PostgreSQL).
 I enjoy turning complex ideas into simple, scalable solutions and building systems that are fast, secure, and easy to maintain.
