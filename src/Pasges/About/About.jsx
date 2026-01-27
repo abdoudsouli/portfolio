@@ -1,6 +1,7 @@
 import RotatingText from '../../components/Reactbits/RotatingText'
-import developer from '../../assets/deve.svg'
+import ProfileCard from '../../components/Reactbits/ProfileCard'
 import LogoLoop from '../../components/Reactbits/LogoLoop';
+import me from "../../assets/me-removebg.png"
 import { SiReact, SiMysql , SiLaravel , SiTailwindcss,SiJavascript ,SiPostgresql,SiHtml5,SiCss3 ,SiBootstrap,SiJquery,SiAdobeillustrator ,SiAdobephotoshop,SiCpanel,SiJira,SiRefinedgithub,SiGit    } from 'react-icons/si';
 import { motion } from "motion/react"
 
@@ -102,15 +103,32 @@ Always curious, always learning — I’m driven by growth, performance, and wel
         }}
     className='hidden lg:flex justify-center'>
       <motion.div
-  initial={{ y: "-2rem" }}
-animate={{ y: ["-2rem", "0rem", "-2rem"] }}
+  initial={{ y: "-1rem" }}
+animate={{ y: ["-1rem", "0rem", "-1rem"] }}
 transition={{
   duration: 4,
   repeat: Infinity,
   ease: "easeInOut"
 }}
       >
-        <img src={developer} alt="" />
+   
+   <ProfileCard
+  name="Dsouli Abderrazak"
+  title="Full Stack Web Developer"
+  handle="abdoudsouli"
+  status="Online"
+  contactText="Contact Me"
+  avatarUrl={me}
+  showUserInfo={true}
+  enableTilt={true}
+  enableMobileTilt={true}
+  onContactClick={() => console.log('Contact clicked')}
+  showIcon={true}
+  showBehindGlow={true}
+  behindGlowColor="hsla(237, 100%, 70%, 0.6)"
+  customInnerGradient="linear-gradient(145deg,hsla(237, 40%, 45%, 0.55) 0%,hsla(139, 60%, 70%, 0.27) 100%)"
+/>
+
       </motion.div>
     </motion.div>
   </div>

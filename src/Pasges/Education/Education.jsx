@@ -2,7 +2,7 @@ import { motion } from "motion/react"
 import { FaGraduationCap } from "react-icons/fa6";
 import { FaCaretRight } from "react-icons/fa6";
 import { FaCalendar } from "react-icons/fa";
-
+import PixelCard from '../../components/Reactbits/PixelCard';
 export default function Education() {
   return (
        <div className="container h-max py-5  mx-auto md:py-0 ">
@@ -33,36 +33,48 @@ export default function Education() {
          }}
       className='grid grid-cols-1 md:grid-cols-3 gap-5 mx-5 md:mx-0'>
 
-<div className="block p-6 border border-gray-900   dark:border-red-900 rounded-lg shadow-lg shadow-gray-400 dark:shadow-red-900 transition-all ease-in-out duration-700 hover:scale-105">
-    <div className="text-5xl mb-5">
+<PixelCard variant="pink">
+  <div className="absolute">   
+     <div className="text-5xl mb-5">
         <FaGraduationCap />
     </div>
-    <h5 className="mb-3 text-2xl font-semibold tracking-tight text-heading leading-8">Specialized University Degree</h5>
+    <h5 className="mb-3 text-2xl font-semibold tracking-tight text-heading leading-8 w-100">Specialized University Degree</h5>
     <p className="text-gray-600 dark:text-gray-400 mb-2 flex items-center"><FaCaretRight />Web and Mobile Development</p>
     <p className="text-gray-600 dark:text-gray-400 mb-2 flex items-center"><FaCaretRight />Ibn Tofail University, Kenitra</p>
     <span className="text-red-800 flex items-center"><FaCalendar />2018-2019</span>
 </div>
+</PixelCard>
 
-
-<div className="block p-6 border border-gray-900   dark:border-red-900 rounded-lg shadow-lg shadow-gray-400 dark:shadow-red-900 transition-all ease-in-out duration-700 hover:scale-105">
-    <div className="text-5xl mb-5">
+<PixelCard variant="pink">
+  <div className="absolute">   
+     <div className="text-5xl mb-5">
         <FaGraduationCap />
     </div>
-    <h5 className="mb-3 text-2xl font-semibold tracking-tight text-heading leading-8">Specialized Technician Diplomat</h5>
+    <h5 className="mb-3 text-2xl font-semibold tracking-tight text-heading leading-8 w-100">Specialized Technician Diplomat</h5>
     <p className="text-gray-600 dark:text-gray-400 mb-2 flex items-center"><FaCaretRight />Computer Development</p>
     <p className="text-gray-600 dark:text-gray-400 mb-2 flex items-center"><FaCaretRight />OFPPT, Ouazzane</p>
     <span className="text-red-800 flex items-center"><FaCalendar className="mr-2" />2016-2018</span>
 </div>
+</PixelCard>
 
-<div className="block p-6 border border-gray-900   dark:border-red-900 rounded-lg shadow-lg shadow-gray-400 dark:shadow-red-900 transition-all ease-in-out duration-700 hover:scale-105">
+  <PixelCard variant="pink">
+  <div className="absolute">
    <div className="text-5xl mb-5">
         <FaGraduationCap />
     </div>
-    <h5 className="mb-3 text-2xl font-semibold tracking-tight text-heading leading-8">BACCALAUREATE EXPERIMENTAL SCIENCES</h5>
+    <h5 className="mb-3 text-2xl font-semibold tracking-tight text-heading leading-8 w-100">BACCALAUREATE EXPERIMENTAL SCIENCES</h5>
     <p className="text-gray-600 dark:text-gray-400 mb-2 flex items-center"><FaCaretRight />EXPERIMENTAL SCIENCES</p>
     <p className="text-gray-600 dark:text-gray-400 mb-2 flex items-center"><FaCaretRight />Ibn Zohr High School, Ouazzane</p>
     <span className="text-red-800 flex items-center"><FaCalendar className="mr-2" />2015-2016</span>
 </div>
+</PixelCard>  
+
+
+
+
+
+
+
 
       </motion.div>
     </div>
