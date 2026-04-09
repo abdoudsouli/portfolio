@@ -1,5 +1,4 @@
 
-import img  from '../../assets/me.png'
 import SplitText from '../../components/Reactbits/SplitText'
 import TextType from '../../components/Reactbits/TextType'
 import { MdEmail } from "react-icons/md";
@@ -7,6 +6,7 @@ import { FaGithub } from "react-icons/fa";
 import { FaLinkedinIn } from "react-icons/fa6";
 import { FaPhoneVolume } from "react-icons/fa6";
 import { motion } from "motion/react"
+import logoimg from "../../assets/mylogo2.png";
 
 export default function Home() {
   return (
@@ -25,6 +25,7 @@ export default function Home() {
          delay:0.5
          }}
 className='text-2xl font-semibold'>
+
 <h2
 className='text-sm w-max py-1 px-3 my-2 bg-red-800 text-gray-50 rounded-lg mx-auto lg:mx-0'
 >Dsouli Abderrazak</h2>
@@ -101,18 +102,15 @@ cursorCharacter="|"
          </div>
 
          <motion.div 
-         initial={{
-          x:'+100vw'
-         }}
-         animate={{
-           x:0
-         }}
-         transition={{
-          duration:1,
-          delay:0.5
+       initial={{ y: "-1rem" }}
+animate={{ y: ["-1rem", "0rem", "-1rem"] }}
+transition={{
+  duration: 4,
+  repeat: Infinity,
+  ease: "easeInOut"
          }}
          className='md:w-1/2'>
-            <img className='shadow-red-800 shadow-2xl rounded-4xl block w-50 mb-12 md:mb-0 md:w-[400px] mx-auto' src={img} alt="" />
+            <img className=' block w-50 mb-12 md:mb-0 md:w-[500px] mx-auto' src={logoimg} alt="" />
          </motion.div>
       </div>
     </div>

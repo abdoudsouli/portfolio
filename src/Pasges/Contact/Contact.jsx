@@ -1,6 +1,8 @@
 
 import { useState } from "react";
 import { motion } from "motion/react"
+import logoimg from "../../assets/mylogo2.png";
+
 export default function Contact() {
 
    const [form, setForm] = useState({
@@ -33,9 +35,10 @@ export default function Contact() {
     className=" flex items-center justify-center px-4">
       <form
         onSubmit={handleSubmit}
-        className="w-full max-w-lg  p-8 space-y-6"
+        className="w-full max-w-lg  px-8 space-y-6"
       >
-        <h2 className="text-2xl font-bold  text-center">
+              <img src={logoimg} className="h-20 mx-auto" alt="" />
+        <h2 className="text-lg font-bold  text-center">
           Do you have any questions? I will answer them ,Connect with me
         </h2>
         <p className='text-gray-600 dark:text-xs text-center'>d love to hear from you! If you have any questions, comments or feedback, please use the form below. </p>
