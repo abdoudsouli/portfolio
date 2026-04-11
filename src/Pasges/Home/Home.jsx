@@ -31,7 +31,7 @@ className='text-sm w-max py-1 px-3 my-2 bg-red-800 text-gray-50 rounded-lg mx-au
 >Dsouli Abderrazak</h2>
 <SplitText
 className='uppercase text-5xl'
-text="hay! i'm Dsouli"
+text="hi! i'm Dsouli"
 delay={100}
 duration={1.1}
 />    
