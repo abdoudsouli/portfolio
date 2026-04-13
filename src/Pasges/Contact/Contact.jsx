@@ -1,7 +1,8 @@
 
-import { useState } from "react";
+import { useState,useEffect } from "react";
 import { motion } from "motion/react"
-import logoimg from "../../assets/mylogo2.png";
+import red from "../../assets/red.png";
+import light from "../../assets/light.png";
 
 export default function Contact() {
 
@@ -20,6 +21,27 @@ export default function Contact() {
     console.log(form);
   };
 
+ const [isDark, setIsDark] = useState(false);
+
+  useEffect(() => {
+    const checkDark = () => {
+      setIsDark(document.documentElement.classList.contains("dark"));
+    };
+
+    checkDark(); // أول مرة
+
+    const observer = new MutationObserver(checkDark);
+
+    observer.observe(document.documentElement, {
+      attributes: true,
+      attributeFilter: ["class"],
+    });
+
+    return () => observer.disconnect();
+  }, []);
+
+  const image = isDark ? red : light;
+
   return (
     <motion.section
      initial={{
@@ -37,7 +59,7 @@ export default function Contact() {
         onSubmit={handleSubmit}
         className="w-full max-w-lg  px-8 space-y-6"
       >
-              <img src={logoimg} className="h-20 mx-auto" alt="" />
+              <img src={image} className="h-20 mx-auto" alt="" />
         <h2 className="text-lg font-bold  text-center">
           Do you have any questions? I will answer them ,Connect with me
         </h2>

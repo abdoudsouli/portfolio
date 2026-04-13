@@ -6,9 +6,33 @@ import { FaGithub } from "react-icons/fa";
 import { FaLinkedinIn } from "react-icons/fa6";
 import { FaPhoneVolume } from "react-icons/fa6";
 import { motion } from "motion/react"
-import logoimg from "../../assets/mylogo2.png";
+import red from "../../assets/red.png";
+import light from "../../assets/light.png";
+import { useEffect, useState } from "react";
 
 export default function Home() {
+
+  const [isDark, setIsDark] = useState(false);
+
+  useEffect(() => {
+    const checkDark = () => {
+      setIsDark(document.documentElement.classList.contains("dark"));
+    };
+
+    checkDark(); // أول مرة
+
+    const observer = new MutationObserver(checkDark);
+
+    observer.observe(document.documentElement, {
+      attributes: true,
+      attributeFilter: ["class"],
+    });
+
+    return () => observer.disconnect();
+  }, []);
+
+  const image = isDark ? red : light;
+
   return (
     <div className="container h-[calc(100vh-5rem)] mx-auto ">
       <div className="text-center h-full flex flex-col-reverse  md:flex-row md:items-center md:mx-0 md:text-left">
@@ -110,7 +134,7 @@ transition={{
   ease: "easeInOut"
          }}
          className='md:w-1/2'>
-            <img className=' block w-50 mb-12 md:mb-0 md:w-[500px] mx-auto' src={logoimg} alt="" />
+              <img className=' block w-50 mb-12 md:mb-0 md:w-[500px] mx-auto' src={image} alt="" />
          </motion.div>
       </div>
     </div>

@@ -4,7 +4,9 @@ import { IoMdMenu } from "react-icons/io";
 import { MdOutlineLightMode } from "react-icons/md";
 import { MdNightlight } from "react-icons/md";
 import { IoIosSend } from "react-icons/io";
-import logoimg from "../../assets/mylogo.png";
+
+import logo from "../../assets/logo.png";
+import logodark from "../../assets/logodark.png";
 import useTheme from "../../Hoocks/useTheme";
 
 
@@ -23,6 +25,9 @@ export default function Navbar() {
         onClick={() => handleThemeChange('light')}
         className="text-2xl cursor-pointer hover:text-red-800 transition duration-700"
       />
+    ),
+    logoimg:(
+      <img src={logodark} className="h-10 mx-auto" alt="" />
     )
   },
   light: {
@@ -32,18 +37,22 @@ export default function Navbar() {
         onClick={() => handleThemeChange('dark')}
         className="text-2xl cursor-pointer hover:text-red-800 transition duration-700"
       />
+    ),
+    logoimg:(
+     <img src={logo} className="h-10 mx-auto" alt="" />
     )
   }
 };
+
+
 
   return (
     <>
         <header className="container py-5 h-20 mx-auto">
             <div className="grid items-center grid-cols-[2fr_3fr] mx-3 md:mx-0">
         <div className=" uppercase text-lg font-bold text-center lg:text-left">
-         <NavLink to="/" className="flex justify-center items-center">
-         <img src={logoimg} className="h-10" alt="" />
-         <h1><span className="text-red-700">Dsouli</span> Abderrazak</h1>
+         <NavLink to="/">
+         {themes[theme]?.logoimg}
          </NavLink>
         </div>
          <ul className="hidden gap-8 mx-auto  md:flex md:items-center">
