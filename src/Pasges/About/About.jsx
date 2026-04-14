@@ -4,6 +4,7 @@ import LogoLoop from '../../components/Reactbits/LogoLoop';
 import me from "../../assets/me-removebg.png"
 import { SiReact, SiMysql , SiLaravel , SiTailwindcss,SiJavascript ,SiPostgresql,SiHtml5,SiCss3 ,SiBootstrap,SiJquery,SiAdobeillustrator ,SiAdobephotoshop,SiCpanel,SiJira,SiRefinedgithub,SiGit    } from 'react-icons/si';
 import { motion } from "motion/react"
+import { useNavigate } from "react-router-dom";
 
 const techLogos = [
  { node: <SiReact />, title: "React", href: "https://react.dev/" },
@@ -25,34 +26,14 @@ const techLogos = [
 
 
 export default function About() {
+
+  const navigate = useNavigate();
+
   return (
     <div className="container h-[calc(100vh-5rem)] flex flex-col justify-center  mx-auto py-6"> 
-        <motion.h2
-        initial={{
-          y:'+2rem'
-        }}
-        animate={{
-          y:0
-        }}
-        transition={{
-          duration:1,
-          delay:0.5
-        }}
-        className='text-2xl flex items-center mx-auto md:mx-0 gap-5 font-bold'>
-        Programing
-          <RotatingText
-          texts={['With','Laravel','×','React','Powerful','Fast','Modern']}
-          mainClassName="px-2 sm:px-2 md:px-3 overflow-hidden py-0.5 sm:py-1 md:py-2 justify-center rounded-lg bg-red-800 text-gray-50"
-          staggerFrom={"last"}
-          initial={{ y: "100%" }}
-          animate={{ y: 0 }}
-          exit={{ y: "-120%" }}
-          staggerDuration={0.025}
-          splitLevelClassName="overflow-hidden pb-0.5 sm:pb-1 md:pb-1"
-          transition={{ type: "spring", damping: 30, stiffness: 300 }}
-          rotationInterval={2000}/>
-      </motion.h2>
+      
   <div className='grid grid-cols-1 md:grid-cols-[3fr_2fr] items-center gap-2'>
+     
     <motion.div 
         initial={{
           x:'-100rem'
@@ -66,6 +47,21 @@ export default function About() {
         }}
         className='mx-5 my-5 md:mx-0 md:my-0'
     >
+ <h2
+        className='text-2xl flex items-center mx-auto md:mx-0 gap-5 font-bold'>
+        Programing
+          <RotatingText
+          texts={['With','Laravel','×','React','Powerful','Fast','Modern']}
+          mainClassName="px-2 sm:px-2 md:px-3 overflow-hidden py-0.5 sm:py-1 md:py-2 justify-center rounded-lg bg-red-800 text-gray-50"
+          staggerFrom={"last"}
+          initial={{ y: "100%" }}
+          animate={{ y: 0 }}
+          exit={{ y: "-120%" }}
+          staggerDuration={0.025}
+          splitLevelClassName="overflow-hidden pb-0.5 sm:pb-1 md:pb-1"
+          transition={{ type: "spring", damping: 30, stiffness: 300 }}
+          rotationInterval={2000}/>
+      </h2>
      <h2 className='text-2xl font-bold uppercase text-red-700'>About Me</h2>
      <p className='text-md text-gray-600 dark:text-gray-300 leading-6'>
 I’m a Full Stack Web Developer with 5 years of experience, including 2 years as a freelance developer, crafting modern and reliable web applications.
@@ -112,17 +108,17 @@ transition={{
 }}
       >
    
-   <ProfileCard
-  name="Dsouli Abderrazak"
-  title="Full Stack Web Developer"
-  handle="abdoudsouli"
-  status="Online"
+ <ProfileCard
+  name=""
+  title=""
+  handle="Dsouli Abderrazak"
+  status="Full Stack Web Developer"
   contactText="Contact Me"
   avatarUrl={me}
   showUserInfo={true}
   enableTilt={true}
   enableMobileTilt={true}
-  onContactClick={() => console.log('Contact clicked')}
+  onContactClick={() => navigate("/contact")}
   showIcon={true}
   showBehindGlow={true}
   behindGlowColor="hsla(237, 100%, 70%, 0.6)"

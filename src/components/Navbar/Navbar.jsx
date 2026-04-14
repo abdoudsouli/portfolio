@@ -27,7 +27,7 @@ export default function Navbar() {
       />
     ),
     logoimg:(
-      <img src={logodark} className="h-10 mx-auto" alt="" />
+      <img src={logodark} className="h-10" alt="" />
     )
   },
   light: {
@@ -39,7 +39,7 @@ export default function Navbar() {
       />
     ),
     logoimg:(
-     <img src={logo} className="h-10 mx-auto" alt="" />
+     <img src={logo} className="h-10" alt="" />
     )
   }
 };

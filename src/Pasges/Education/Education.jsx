@@ -21,7 +21,7 @@ export default function Education() {
          }}
       className='flex flex-col justify-around items-center md:flex-row gap-2'>
 
-<div className="w-full md:w-1/2">
+<div className="w-full md:w-1/3">
        <motion.h2 
       initial={{
         x:'+5vw'
@@ -52,7 +52,7 @@ export default function Education() {
 </div>
  
 
-<div className="w-1/12 md:w-1/3 h-[200px] md:h-[500px]  relative">
+<div className="w-1/12 md:w-1/6 h-[200px] md:h-[450px]  relative">
   
   <CardSwap
     cardDistance={80}

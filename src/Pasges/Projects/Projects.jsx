@@ -1,15 +1,27 @@
 import { NavLink  } from "react-router-dom";
+import { motion } from "motion/react"
 
 import ScrollStack, { ScrollStackItem } from '../../components/Reactbits/ScrollStack'
 
 export default function Projects() {
   return (
-   <div className="container mx-auto md:h-[calc(100vh-13rem)]">
+   <motion.div  initial={{
+        y:'+5vw'
+        }}
+        animate={{
+         y:0
+        }}
+        transition={{
+         duration:1,
+         delay:0.2
+         }} className="container mx-auto md:h-[calc(100vh-13rem)]">
 
- <div className="py-5 m text-center "> 
+ <div
+ className="py-5 m text-center "> 
      <h2 className="text-3xl my-2">My portfolio</h2>
     <p className="">Dive into a curated collection of my finest work, showcasing expertise across various industries.</p> 
  </div>
+
 
 <ScrollStack>
   
@@ -156,6 +168,7 @@ export default function Projects() {
    </div>
   </ScrollStackItem>
 </ScrollStack>
-    </div>
+
+    </motion.div>
   )
 }
