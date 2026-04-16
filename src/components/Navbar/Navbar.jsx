@@ -1,6 +1,5 @@
 import { NavLink  } from "react-router-dom";
 import { motion } from "motion/react";
-import { IoMdMenu } from "react-icons/io";
 import { MdOutlineLightMode } from "react-icons/md";
 import { MdNightlight } from "react-icons/md";
 import { IoIosSend } from "react-icons/io";
@@ -8,9 +7,26 @@ import { IoIosSend } from "react-icons/io";
 import logo from "../../assets/logo.png";
 import logodark from "../../assets/logodark.png";
 import useTheme from "../../Hoocks/useTheme";
+import StaggeredMenu from '../../components/Reactbits/StaggeredMenu';
 
 
 export default function Navbar() {
+
+const menuItems = [
+  { label: 'Home', ariaLabel: 'Go to home page', link: '/' },
+  { label: 'About me', ariaLabel: 'Learn about us', link: '/about' },
+  { label: 'Contact', ariaLabel: 'Get in touch', link: '/contact' },
+  { label: 'My projects', ariaLabel: 'View our projects', link: '/portfolio' },
+  { label: 'Education', ariaLabel: 'Education', link: '/education' }
+];
+
+const socialItems = [
+  { label: 'Facebook', link: 'https://www.facebook.com/abde1a' },
+  { label: 'GitHub', link: 'https://github.com/abdoudsouli' },
+  { label: 'LinkedIn', link: 'https://www.linkedin.com/in/abderrazak-dsouli/' }
+];
+
+
    const [theme, setTheme] = useTheme();
 
     const handleThemeChange = (mode) => {
@@ -48,14 +64,14 @@ export default function Navbar() {
 
   return (
     <>
-        <header className="container py-5 h-20 mx-auto">
+        <header className="hidden md:block container py-5 h-20 mx-auto">
             <div className="grid items-center grid-cols-[2fr_3fr] mx-3 md:mx-0">
         <div className=" uppercase text-lg font-bold text-center lg:text-left">
          <NavLink to="/">
          {themes[theme]?.logoimg}
          </NavLink>
         </div>
-         <ul className="hidden gap-8 mx-auto  md:flex md:items-center">
+         <ul className="gap-8 mx-auto  md:flex md:items-center">
         <motion.li
         whileHover={{ y: -3 }}
         transition={{
@@ -120,12 +136,29 @@ export default function Navbar() {
          <NavLink to="/contact" className="py-2 px-3 bg-red-700 text-gray-50 rounded-lg hover:bg-gray-50 hover:text-red-800 transition ease-in-out duration-700 flex items-center"> <IoIosSend/> Get in touch</NavLink>
         </motion.li>
        </ul>
-       <div className=" flex justify-end md:hidden mx-5">
-           <IoMdMenu className="text-3xl cursor-pointer  " /> 
-       </div>
+
+ 
             </div>
-            
+   
         </header>
+
+<div className="mb-20 block md:hidden">
+        <StaggeredMenu
+    position="right"
+    items={menuItems}
+    socialItems={socialItems}
+    displaySocials
+    displayItemNumbering={true}
+    menuButtonColor="#ffffff"
+    openMenuButtonColor="#fff"
+    changeMenuColorOnOpen={true}
+    colors={['#B19EEF', '#5227FF']}
+    logoUrl={logo}
+    accentColor="#5227FF"
+    onMenuOpen={() => console.log('Menu opened')}
+    onMenuClose={() => console.log('Menu closed')}
+  />
+</div>
     </>
   )
 }
