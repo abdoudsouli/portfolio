@@ -60,10 +60,14 @@ export default function Contact() {
         className="w-full max-w-lg  px-8 space-y-6"
       >
               <img src={image} className="h-20 mx-auto" alt="" />
-        <h2 className="text-md font-bold  text-center">
-          Do you have any questions? I will answer them ,Connect with me
-        </h2>
-        <p className='text-gray-600 text-xs text-center'>d love to hear from you! If you have any questions, comments or feedback, please use the form below. </p>
+<h2 className="text-lg font-semibold text-center">
+  Let’s Work Together
+</h2>
+
+<p className="text-gray-600 text-sm text-center mt-2">
+  I’m always open to discussing new projects, creative ideas, or opportunities to be part of your vision.  
+  Send me a message and let’s build something great together.
+</p>
         <input
           type="text"
           name="name"

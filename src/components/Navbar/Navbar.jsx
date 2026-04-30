@@ -15,7 +15,7 @@ export default function Navbar() {
 const menuItems = [
   { label: 'Home', ariaLabel: 'Go to home page', link: '/' },
   { label: 'About me', ariaLabel: 'Learn about us', link: '/about' },
-  { label: 'Contact', ariaLabel: 'Get in touch', link: '/contact' },
+  { label: 'Contact me', ariaLabel: 'Get in touch', link: '/contact' },
   { label: 'My projects', ariaLabel: 'View our projects', link: '/portfolio' },
   { label: 'Education', ariaLabel: 'Education', link: '/education' }
 ];
@@ -65,7 +65,7 @@ const socialItems = [
   return (
     <>
         <header className="hidden md:block container py-5 h-20 mx-auto">
-            <div className="grid items-center grid-cols-[2fr_3fr] mx-3 md:mx-0">
+            <div className="grid items-center grid-cols-[2fr_4fr] mx-3 md:mx-0">
         <div className=" uppercase text-lg font-bold text-center lg:text-left">
          <NavLink to="/">
          {themes[theme]?.logoimg}
@@ -95,7 +95,7 @@ const socialItems = [
             duration:0.5,
             delay:0.2
         }}>
-            <NavLink to="/contact" className={({ isActive }) =>isActive? "text-red-700 ": ""}>Contact</NavLink>
+            <NavLink to="/contact" className={({ isActive }) =>isActive? "text-red-700 ": ""}>Contact me</NavLink>
         </motion.li>
         
         <motion.li
